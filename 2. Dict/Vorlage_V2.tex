@@ -1,0 +1,148 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.6.1
+% see http://writer2latex.sourceforge.net for more info
+\documentclass[a4paper]{article}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+
+\usepackage[T1]{fontenc} % für German
+\usepackage[ngerman]{babel}
+\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{hhline}
+\usepackage{hyperref}
+%\hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=, pdfauthor=, pdfsubject=, pdfkeywords=}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref,wasysym}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% Rahmen
+\usepackage{fancybox}% http://ctan.org/pkg/fancybox
+
+% Section in der Mitte darstellen
+\usepackage{sectsty}
+\sectionfont{\centering}
+
+% Outline numbering
+\setcounter{secnumdepth}{0}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+% Page layout (geometry)
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{2cm}
+\setlength\oddsidemargin{2cm}
+\setlength\textheight{24.777668cm}
+\setlength\textwidth{17.001cm}
+\setlength\footskip{26.144882pt}
+\setlength\headheight{0cm}
+\setlength\headsep{0cm}
+
+% Pages styles
+\makeatletter
+
+\makeatother
+\pagestyle{fancy}
+% remove fancy header horrizontal line
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+
+% ---- Fusszeile -----
+% Footnote rule
+\fancyheadoffset[LO,RE]{2cm}
+\fancyheadoffset[RO,LE]{-2cm}
+%\fancyfootoffset[LO, RO]{0.5cm}
+\lfoot{Zeugnis Stufe \ZeugnisStufe \space für \name }
+% \cfoot{\name}
+\rfoot{Seite \thepage \space / \ \pageref{LastPage} }
+
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+\title{}
+\author{}
+\date{2022-02-18}
+
+% ---- Schülerdaten generell -----
+\input{schuelerdaten}
+%\newcommand{\name}{Hans Wurst}
+%\newcommand{\ZeugnisStufe}{3}
+%\newcommand{\Schulbesuchsjahr}{3}
+%\newcommand{\Klasse}{3a}
+%\newcommand{\GebDatum}{2015-01-01}
+%\newcommand{\Schuljahr}{2021/2022}
+%\newcommand{\Stundenabwesend}{33}
+%\newcommand{\Stundenunentschuldigt}{0}
+\input{kopfdaten}
+
+\begin{document}
+	 % Rahmen aussen
+	\fancyput(8cm,-12.3cm){%
+		\setlength{\unitlength}{1cm}\fancyoval(20,28.7)}
+
+	
+	\input{Kopf}
+	
+	\bigskip
+	
+	{\centering\bfseries
+		\huge Zeugnis Stufe \ZeugnisStufe
+		\par}
+	
+	{\centering
+		\Schulbesuchsjahr.Schulbesuchsjahr
+		\par}
+	\bigskip
+	{\centering
+		\name
+		\par}
+	
+	\begin{flushleft}
+		\tablefirsthead{}
+		\tablehead{}
+		\tabletail{}
+		\tablelasttail{}
+		\begin{supertabular}{m{5.012cm}m{0.25300002cm}m{1.4369999cm}m{0.991cm}m{0.7cm}m{1.74cm}m{5.48cm}}
+			Geb. Datum: \GebDatum &
+			~
+			&
+			Klasse: &
+			\Klasse &
+			\multicolumn{2}{m{2.64cm}}{~
+			} &
+			Schuljahr: \Schuljahr \\
+			 &
+			~
+			&
+			\multicolumn{3}{m{3.528cm}}{versäumte Stunden:} &
+			\Stundenabwesend &
+			davon unentschuldigt: \Stundenunentschuldigt \\
+		\end{supertabular}
+	\end{flushleft}
+	
+	\bigskip
+	
+	\input{report}
+	\bigskip
+	%\input{Deutsch}
+	%\bigskip
+	%\input{Deutsch}
+	%\bigskip
+	%\input{Deutsch}
+	%\bigskip
+	%\input{Deutsch}
+	
+	%\bigskip
+	
+	%{\textbackslash}usepackage\{hyperref,wasysym\}
+	%{\textbackslash}centering \{{\textbackslash}huge {\textbackslash}Square {\textbackslash}CheckedBox
+	%{\textbackslash}XBox\}
+	%{\textbackslash}centering \{{\textbackslash}huge \ {\textbackslash}CheckedBox \}
+	%{\textbackslash}centering \{{\textbackslash}huge {\textbackslash}Square \ \}
+	%{\textbackslash}centering \{{\textbackslash}huge {\textbackslash}XBox\}
+\end{document}
